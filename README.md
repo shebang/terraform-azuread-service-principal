@@ -1,4 +1,6 @@
-# Service Principal Terraform Module - FORKED from kumarvna/terraform-azuread-service-principal
+# Service Principal Terraform Module
+
+*FORKED from kumarvna/terraform-azuread-service-principal*
 
 Terraform module to create a service principal and assign required built-in roles. The outputs from this module, like application_id and password, can be used as an input in other modules.
 
