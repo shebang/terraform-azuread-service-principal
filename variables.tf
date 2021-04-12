@@ -13,6 +13,12 @@ variable "password_end_date" {
   default     = null
 }
 
+variable "hide_secrets" {
+  type        = bool
+  description = "Use sensitive flag for sensitive output"
+  default     = true
+}
+
 variable "password_rotation_in_years" {
   description = "Number of years to add to the base timestamp to configure the password rotation timestamp. Conflicts with password_end_date and either one is specified and not the both"
   default     = null

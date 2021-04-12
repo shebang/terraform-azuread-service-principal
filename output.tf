@@ -21,13 +21,13 @@ output "client_id" {
 output "client_secret" {
   description = "Password for service principal."
   value       = azuread_service_principal_password.main.*.value
-  sensitive   = true
+  sensitive   = var.hide_secrets
 }
 
 output "service_principal_password" {
   description = "Password for service principal."
   value       = azuread_service_principal_password.main.*.value
-  sensitive   = true
+  sensitive   = var.hide_secrets
 }
 
 output "service_principal_certificate_id" {
