@@ -1,6 +1,6 @@
-locals {
-  hide_secrets = var.hide_secrets ? true : false
-}
+# locals {
+#   hide_secrets = var.hide_secrets ? true : false
+# }
 
 output "service_principal_name" {
   description = "The object id of service principal. Can be used to assign roles to user."
@@ -25,13 +25,13 @@ output "client_id" {
 output "client_secret" {
   description = "Password for service principal."
   value       = azuread_service_principal_password.main.*.value
-  sensitive   = local.hide_secrets
+  # sensitive   = local.hide_secrets
 }
 
 output "service_principal_password" {
   description = "Password for service principal."
   value       = azuread_service_principal_password.main.*.value
-  sensitive   = local.hide_secrets
+  # sensitive   = local.hide_secrets
 }
 
 output "service_principal_certificate_id" {
