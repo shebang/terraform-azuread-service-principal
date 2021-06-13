@@ -11,7 +11,7 @@ To create a service principal and assign roles to the resources, this module nee
 ```hcl
 module "service-principal" {
   source  = "kumarvna/service-principal/azuread"
-  version = "2.0.0"
+  version = "2.1.0"
 
   service_principal_name     = "simple-appaccess"
   password_rotation_in_years = 1
@@ -38,7 +38,7 @@ This module creates the service principal using a certificate. This can be enabl
 ```hcl
 module "service-principal" {
   source  = "kumarvna/service-principal/azuread"
-  version = "2.0.0"
+  version = "2.1.0"
 
   service_principal_name               = "simple-appaccess"
   enable_service_principal_certificate = true
@@ -80,7 +80,7 @@ You can set the scope at the level of the subscription, resource group, or resou
 ```hcl
 module "service-principal" {
   source  = "kumarvna/service-principal/azuread"
-  version = "2.0.0"
+  version = "2.1.0"
   
   # .... omitted
 
@@ -99,16 +99,16 @@ module "service-principal" {
 Name | Version
 -----|--------
 terraform | >= 0.13
-azurerm | ~> 2.27.0
+azurerm | >= 2.59.0
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-azurerm | 2.27.0
-random | 2.3.0
-azuread | 0.11.0
-time | 0.5.0
+azurerm | >= 2.59.0
+random | >= 3.1.0
+azuread | >= 1.4.0
+time | >= 0.7.1
 
 ## Inputs
 
